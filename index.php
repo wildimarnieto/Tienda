@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +7,7 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <title>Catalogo de VideoJuegos</title> 
-		<title></title>
+		
 
 </head>
 
