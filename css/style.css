@@ -1,0 +1,129 @@
+body{
+	margin: 0 auto;
+	height: 50%;
+	width: 80%;	
+	background: rgb(228,228,228);
+}
+#masquilados{
+	overflow: scroll;
+	height: 42.5%;
+	list-style-type:none;
+	width: 90%;
+	border-style: ridge;
+}
+ 
+#login{
+	margin-left: 40%;
+	margin-top: 20%;
+}
+#registro{
+	margin-left: 40%;
+	margin-top: 10%;
+}
+#Titulo{
+	font: bold 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	size:1em;	
+	margin-top: 1%;
+	width: 100%;
+	border: 1px solid black;
+}
+
+#Video{
+	width: 80%;
+	height: 400px;
+}
+
+#TablaInfo{
+	width: 80%;
+}
+#TituloJuegoSelect{
+	font: bold 2em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	size:1em;
+	text-align: center;
+}
+#SelectJuego{
+	margin-left: 15%;
+}
+
+tr {
+  border-style: ridge;
+}
+
+table { 
+  border-collapse: collapse; 
+}
+
+#Juegos{
+	background: rgb(255,255,255);
+	overflow: scroll;
+	float: left;
+	height: 700px;
+	width: 82%;
+	border-style: ridge;
+	margin-top: 1%;
+}
+#NJuegos{
+		
+	float: left;
+	height: 700px;
+	width: 82%;
+	border-style: ridge;
+	margin-top: 1%;
+}
+
+#NuevoJuego{
+	margin-left: 15%;
+	margin-top: 5%;
+}
+.ImagenJuego{
+	height: 130px;
+	width: 130px;	
+}
+
+.Producto{
+
+	float: left;
+	height: 28%;
+	width: 15%;
+	margin-left: 7px;
+	border-style: ridge;
+}
+
+.Producto1{
+
+	float: left;
+	height: 40%;
+	width: 15%;
+	margin-left: 7px;
+	border-style: ridge;
+}
+
+.Text{
+	text-align: center;
+}
+
+#infoUser{
+	border-style: ridge;
+}
+#Categorias{
+	border-style: ridge;	
+}
+aside{
+
+	float: left;
+	width: 16%;
+	height: 700px;
+	margin-top: 1%;
+	margin-left: 1%;
+	/*border: 1px solid black;*/
+
+}
+
+footer{
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 3%;
+	margin-top: 1%;
+	border: 1px solid black;
+}
