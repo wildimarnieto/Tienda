@@ -27,6 +27,11 @@
 			return $this->datos;
 		}
 
+		function mod_Cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass, $imagen){
+			$this->datos=$this->cliente->mod_cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass, $imagen);
+			return $this->datos;
+		}
+
 		function set_Cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass){
 			$this->datos = $this->cliente->set_cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass);
 			return $this->datos;
@@ -63,6 +68,46 @@
 		} else {
 		 	$mensaje = "Todos los campos no deben de estar vacios!";
 		}
+	}
+
+	if(isset($_POST["modificar"])){
+		require ('../Modelos/Db.php');
+		$registro = new Controller_Cliente();
+
+		if(empty($_FILES['imagen'])) {
+      		echo "No he recibido la imagen";
+   			exit;
+   		}
+		if(!empty($_POST['email']) && !empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['cedula']) && !empty($_POST['telefono']) && !empty($_POST['user']) && !empty($_POST['pass'])  && !empty($_FILES['imagen']) ) {
+			$email=$_POST['email'];
+			$nombre=$_POST['nombre'];
+			$apellido=$_POST['apellido'];
+			$telefono=$_POST['telefono'];
+			$cedula=$_POST['cedula'];
+			$user=$_POST['user'];
+			$pass=$_POST['pass'];
+
+			$archivo = $_FILES['imagen']['tmp_name'];
+			$nombre1 = $_FILES['imagen']['name'];
+			move_uploaded_file($archivo, "../../img_clientes/".$nombre1);
+			$imagen = "img_clientes/".$nombre1;
+
+
+			$rta=$registro->mod_Cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass, $imagen);
+			echo $rta;
+			echo "
+			<script>
+				window.location.href = '../Vistas/PrestamosUsuario.php'
+			</script>";	
+		}else{
+			$mensaje1 = "Error en los datos ingresados";
+			echo "
+			<script>
+				alert('".$mensaje1."')
+				window.location.href = '../Vistas/PrestamosUsuario.php'
+			</script>";	
+		}
+		
 	}
 
 	if (!empty($mensaje)) {

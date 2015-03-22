@@ -79,7 +79,7 @@ if(!isset($_SESSION["user"])){
 					<br>
 					<a href='../Controladores/logout.php' >CERRAR SESION</a>
 					
-					<button type='button' id='terminar' style='margin-left:2%'>
+					<button type='button' id='terminar' onclick='Terminar(\"".$_SESSION["user"]."\")' style='margin-left:2%'>
 						<img src='../../img/carrito.png' width='120' height='120' ></img>
 					</button>
 

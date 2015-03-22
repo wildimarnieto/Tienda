@@ -1,8 +1,0 @@
-nombre: BATTLEFIELD HARDLINE
-descripcion:Battlefield: Hardline es el pr&oacute;ximo videojuego de acci&oacute;n en primera persona a lanzarse desarrollado por Visceral Games y EA Digital Illusions CE (DICE), y distribuido por Electronic Arts. Ser&aacute; el primer juego de la serie que tendr&aacute; como tem&aacute;tica principal el crimen policiaco, adem&aacute;s de lanzarse para Microsoft Windows, Xbox 360, Xbox One, PlayStation 3 y PlayStation 4.
-cantidad:31
-precio:14000
-plataformas:XBOX/PS/PC
-imagen:img/BHL.jpg
-video:OfOEmtppbYE
-categoria:2

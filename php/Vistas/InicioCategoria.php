@@ -23,6 +23,15 @@ if(!isset($_SESSION["user"])){
 			<header id='TituloJuegoSelect'>
 				<h1>Prestamo de VideoJuegos</h1>
 			</header>
+			<hr>
+				<form name="busqueda" id="busqueda" action="../Controladores/Controller_Juegos.php" method="post">
+					<p>
+						<label >Buscar:
+						<input type="text" name="buscar" id="buscar" class="input" size="40" value="Nombre Juego..."  /></label>
+						<input type="submit" name="Buscar" id="Buscar" class="button" value="Buscar" />
+					</p>
+				</form>
+			<hr>
 					<?php
 						require ('../Modelos/Db.php');
 						require '../Controladores/Controller_Juegos.php';

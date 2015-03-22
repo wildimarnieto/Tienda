@@ -14,6 +14,24 @@
 			return $this->categorias;
 		}
 
+		function set_categoria($id, $descripcion){
+			$query="Insert into CATEGORIA values (".$id.",'$descripcion');";
+			$this->cateorias=$this->db->db_query($query);
+			return $this->categorias;
+		}
+
+		function mod_categoria($id, $descripcion){
+			$query="Update CATEGORIA set DESCRIPCION='$descripcion' where ID=".$id."";
+			$this->cateorias=$this->db->db_query($query);
+			return $this->categorias;
+		}
+
+		function del_categoria($id){
+			$query="Delete from CATEGORIA where ID=".$id.";";
+			$this->cateorias=$this->db->db_query($query);
+			return $this->categorias;
+		}
+
 	}
 
 

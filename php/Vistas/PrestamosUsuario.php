@@ -21,18 +21,103 @@ if(!isset($_SESSION["user"])){
 		</header><!--Termina header del body-->
 		<section id="Juegos">
 			<header id='TituloJuegoSelect'>
-				<h1>Historial VideoJuegos Alquilados</h1>
+				<h1>PERFIL</h1>
 			</header>
+			<?php
+				require ('../Modelos/Db.php');			
+				require '../Controladores/Controller_Prestamo.php';
+				require '../Controladores/Controller_Cliente.php';
+				require '../Controladores/Controller_Juegos.php';
+
+				$clien = new Controller_Cliente();
+				$cont = new Controller_Prestamo();
+				$jueg = new Controller_Juegos();
+				$cliente = $clien->get_Cliente1($_SESSION["user"]);
+				$cliente = $cliente[0];
+
+				echo"
+				<article id='datos'>
+				<form name='modificar' id='modificar' action='../Controladores/Controller_Cliente.php' method='post' enctype='multipart/form-data'>
+				<table border=1 id='tablaDatos'>
+					<tr>
+						<td>
+							<label>E-mail</label>
+						</td>
+						<td>
+							<input type='text' name='email' id='email' class='input' size='32' value='".$cliente["EMAIL"]."'/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Nombre</label>
+						</td>
+						<td>
+							<input type='text' name='nombre' id='nombre' class='input' size='32' value='".$cliente["NOMBRE"]."'  />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Apellido</label>
+						</td>
+						<td>
+							<input type='text' name='apellido' id='apellido' class='input' size='32' value='".$cliente["APELLIDO"]."' />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Cedula</label>
+						</td>
+						<td>
+							<input type='text' name='cedula' id='cedula' class='input' value='".$cliente["CEDULA"]."' size='32' readonly='readonly'/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Telefono</label>
+						</td>
+						<td>
+							<input type='text' name='telefono' id='telefono' class='input' value='".$cliente["TELEFONO"]."' size='32' />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Usuario</label>
+						</td>
+						<td>
+							<input type='text' name='user' id='user' class='input' value='".$cliente["USER"]."'  size='15' />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Contraseña</label>
+						</td>
+						<td>
+							<input type='password' name='pass' id='pass' class='input' value='".$cliente["PASS"]."' size='15' />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Imagen de perfil</label>
+						</td>
+						<td>
+							<input name='imagen' id='imagen' type='file'> 
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type='submit' name='modificar' id='modificar' class='button' value='Actualizar Datos' /></td>
+					</tr>
+				</table>
+				</form>
+			</article>
+
+				";
+			?>
+			
+			
+			<h1 class='Text'>Historial de juegos alquilados</h1>
+			<hr>
 					<?php
-						require ('../Modelos/Db.php');
-						require '../Controladores/Controller_Prestamo.php';
-						require '../Controladores/Controller_Cliente.php';
-						require '../Controladores/Controller_Juegos.php';
-						$clien = new Controller_Cliente();
-						$cont = new Controller_Prestamo();
-						$jueg = new Controller_Juegos();
-						$cliente = $clien->get_Cliente1($_SESSION["user"]);
-						$cliente = $cliente[0];
 						$datos = $cont->get_Prestamo($cliente["CEDULA"]);
 						if(count($cliente)>0){
 							foreach ($datos as &$dato) {

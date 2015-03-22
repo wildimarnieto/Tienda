@@ -2,55 +2,89 @@ body{
 	margin: 0 auto;
 	height: 50%;
 	width: 80%;	
-	background: rgb(228,228,228);
+	background:-webkit-linear-gradient(#C3D9FF, #FFF);
 }
+
+
 #masquilados{
 	overflow: scroll;
 	height: 42.5%;
 	list-style-type:none;
 	width: 90%;
-	border-style: ridge;
+	border:thin solid #4096EE;
+	border-radius: 10px;
 }
  
 #login{
 	margin-left: 40%;
 	margin-top: 20%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
 }
 #registro{
 	margin-left: 40%;
-	margin-top: 10%;
+	margin-top: 5%;
+	margin-right: 30%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
 }
 #Titulo{
+	text-shadow:10px 5px 5px #72B62E;
 	font: bold 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
 	size:1em;	
 	margin-top: 1%;
 	width: 100%;
-	border: 1px solid black;
+	border:thin solid #4096EE;
+	border-radius: 10px;
 }
 
 #Video{
 	width: 80%;
 	height: 400px;
+	margin-left: 10%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
 }
 
+#tablaDatos{
+	margin-left: 25%;
+	margin-top: 2%;
+}
+
+
 #TablaInfo{
+	float: left;
 	width: 80%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
+	margin:50px 70px 70px 85px;
 }
 #TituloJuegoSelect{
 	font: bold 2em "Trebuchet MS", Arial, Helvetica, sans-serif;
 	size:1em;
 	text-align: center;
+	border:thin solid #4096EE;
+	border-radius: 10px;
+
 }
 #SelectJuego{
-	margin-left: 15%;
+	float: left;
+	margin-left: 3%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
+	
 }
 
 tr {
-  border-style: ridge;
+  border:thin solid #4096EE;
+  border-radius: 10px;
 }
 
 table { 
-  border-collapse: collapse; 
+  box-shadow:10px 5px 5px #000;
+  border:thin solid #4096EE;
+  border-radius: 10px;
+  
 }
 
 #Juegos{
@@ -59,25 +93,37 @@ table {
 	float: left;
 	height: 700px;
 	width: 82%;
-	border-style: ridge;
+	border:thin solid #4096EE;
 	margin-top: 1%;
+	border-radius: 10px;
+	
 }
 #NJuegos{
 		
 	float: left;
 	height: 700px;
 	width: 82%;
-	border-style: ridge;
+	border:thin solid #4096EE;
 	margin-top: 1%;
+	border-radius: 10px;
+
+
 }
 
 #NuevoJuego{
 	margin-left: 15%;
 	margin-top: 5%;
+	border:thin solid #4096EE;
+	border-radius: 10px;
+
 }
 .ImagenJuego{
 	height: 130px;
-	width: 130px;	
+	width: 130px;
+	border-radius: 10px;
+
+
+
 }
 
 .Producto{
@@ -87,6 +133,8 @@ table {
 	width: 15%;
 	margin-left: 7px;
 	border-style: ridge;
+	border-radius: 10px;
+	margin:20px 20px 20px 20px;
 }
 
 .Producto1{
@@ -96,6 +144,7 @@ table {
 	width: 15%;
 	margin-left: 7px;
 	border-style: ridge;
+	border-radius: 10px;
 }
 
 .Text{
@@ -104,9 +153,15 @@ table {
 
 #infoUser{
 	border-style: ridge;
+	border-radius: 10px;
 }
 #Categorias{
-	border-style: ridge;	
+	border-style: ridge;
+	border-radius: 10px;	
+}
+.CRCategoria{
+	border-style: ridge;
+	border-radius: 10px;	
 }
 aside{
 
@@ -116,6 +171,7 @@ aside{
 	margin-top: 1%;
 	margin-left: 1%;
 	/*border: 1px solid black;*/
+	border-radius: 10px;
 
 }
 
@@ -126,4 +182,37 @@ footer{
 	margin-bottom: 3%;
 	margin-top: 1%;
 	border: 1px solid black;
+	border-radius: 10px;
+}
+
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+.oddrowcolor{
+	background-color:#009999;
+}
+.evenrowcolor{
+	background-color:#99FFCC;
+}
+
+#alternatecolor{
+	margin-left: 22%;
+	margin-top: 10%;
 }

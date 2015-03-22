@@ -19,6 +19,12 @@ class Model_Cliente{
 		return $this->clientes;
 	}
 
+	public function mod_cliente($cedula, $nombre, $apellido, $telefono, $email, $user, $pass, $imagen){
+		$query="Update CLIENTE set CEDULA='$cedula' , NOMBRE='$nombre', APELLIDO='$apellido', TELEFONO='$telefono', EMAIL='$email', USER='$user', PASS='$pass', IMAGEN='$imagen'  where CEDULA='$cedula' ; ";
+		$this->clientes=$this->db->db_query($query);
+		return $this->clientes;	
+	}
+
 	public function get_clientes(){
 		$this->clientes=$this->db->db_select("Select * from CLIENTE");
 		return $this->clientes;
